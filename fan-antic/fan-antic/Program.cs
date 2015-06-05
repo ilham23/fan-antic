@@ -10,6 +10,7 @@ namespace fan_antic
     {
         static void Main(string[] args)
         {
+
         }
     }
 }

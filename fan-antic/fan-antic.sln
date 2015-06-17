@@ -7,23 +7,28 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication", "
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
 		LocalWebServerDebug|Any CPU = LocalWebServerDebug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		PROD|Any CPU = PROD|Any CPU
+		RC|Any CPU = RC|Any CPU
+		STG|Any CPU = STG|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6E3620CA-3C98-491A-A3D5-EC73EBB579B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E3620CA-3C98-491A-A3D5-EC73EBB579B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E3620CA-3C98-491A-A3D5-EC73EBB579B2}.LocalWebServerDebug|Any CPU.ActiveCfg = LocalWebServerDebug|Any CPU
 		{6E3620CA-3C98-491A-A3D5-EC73EBB579B2}.LocalWebServerDebug|Any CPU.Build.0 = LocalWebServerDebug|Any CPU
-		{6E3620CA-3C98-491A-A3D5-EC73EBB579B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E3620CA-3C98-491A-A3D5-EC73EBB579B2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F3CD7EE-B48D-4931-9931-2E4003915ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F3CD7EE-B48D-4931-9931-2E4003915ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E3620CA-3C98-491A-A3D5-EC73EBB579B2}.PROD|Any CPU.ActiveCfg = PROD|Any CPU
+		{6E3620CA-3C98-491A-A3D5-EC73EBB579B2}.PROD|Any CPU.Build.0 = PROD|Any CPU
+		{6E3620CA-3C98-491A-A3D5-EC73EBB579B2}.RC|Any CPU.ActiveCfg = RC|Any CPU
+		{6E3620CA-3C98-491A-A3D5-EC73EBB579B2}.RC|Any CPU.Build.0 = RC|Any CPU
+		{6E3620CA-3C98-491A-A3D5-EC73EBB579B2}.STG|Any CPU.ActiveCfg = STG|Any CPU
+		{6E3620CA-3C98-491A-A3D5-EC73EBB579B2}.STG|Any CPU.Build.0 = STG|Any CPU
 		{2F3CD7EE-B48D-4931-9931-2E4003915ADC}.LocalWebServerDebug|Any CPU.ActiveCfg = LocalWebServerDebug|Any CPU
 		{2F3CD7EE-B48D-4931-9931-2E4003915ADC}.LocalWebServerDebug|Any CPU.Build.0 = LocalWebServerDebug|Any CPU
-		{2F3CD7EE-B48D-4931-9931-2E4003915ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F3CD7EE-B48D-4931-9931-2E4003915ADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F3CD7EE-B48D-4931-9931-2E4003915ADC}.PROD|Any CPU.ActiveCfg = PROD|Any CPU
+		{2F3CD7EE-B48D-4931-9931-2E4003915ADC}.PROD|Any CPU.Build.0 = PROD|Any CPU
+		{2F3CD7EE-B48D-4931-9931-2E4003915ADC}.RC|Any CPU.ActiveCfg = RC|Any CPU
+		{2F3CD7EE-B48D-4931-9931-2E4003915ADC}.RC|Any CPU.Build.0 = RC|Any CPU
+		{2F3CD7EE-B48D-4931-9931-2E4003915ADC}.STG|Any CPU.ActiveCfg = STG|Any CPU
+		{2F3CD7EE-B48D-4931-9931-2E4003915ADC}.STG|Any CPU.Build.0 = STG|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -36,7 +36,7 @@ namespace WindowsFormsApplication
             currentTwts.ForEach(twt =>
                 listBox2.Items.Add(twt.Text));
 
-            getSideBarList(GetFollower()).ForEach(name =>
+            getSideBarList(GetFollowingList()).ForEach(name =>
                 listBox1.Items.Add(name));
         }
 
@@ -46,7 +46,7 @@ namespace WindowsFormsApplication
 
             var twts = from twt in twtContext.Status
                 where twt.Type == StatusType.Home &&
-                                 twt.Count == 20
+                                 twt.Count == 200
                 select twt;
 
             currentTwts = twts.ToList();
@@ -61,7 +61,7 @@ namespace WindowsFormsApplication
             var temp = Enumerable.FirstOrDefault(
                 from friend in twtContext.Friendship
                 where friend.Type == FriendshipType.FollowersList &&
-                      //friend.ScreenName == "SBY" &&
+                      friend.ScreenName == "dev_1ru" &&
                       friend.Count == 200
                 select friend);
 
@@ -74,12 +74,46 @@ namespace WindowsFormsApplication
                     temp = Enumerable.FirstOrDefault(
                         from friend in twtContext.Friendship
                         where friend.Type == FriendshipType.FollowersList &&
-                              //friend.ScreenName == "SBY" &&
+                              friend.ScreenName == "dev_1ru" &&
                               friend.Count == 200 &&
                               friend.Cursor == temp.CursorMovement.Next
                         select friend);
 
                     if(temp!= null) temp.Users.ToList().ForEach(user => results.Add(user.Name));
+                }
+            }
+
+            return results;
+        }
+
+        private List<string> GetFollowingList()
+        {
+            List<string> results = new List<string>();
+
+            var twtContext = new TwitterContext(authorizer);
+
+            var temp = Enumerable.FirstOrDefault(
+                from friend in twtContext.Friendship
+                where friend.Type == FriendshipType.FriendsList &&
+                      friend.ScreenName == "dev_1ru" &&
+                      friend.Count == 200
+                select friend);
+
+            if (temp != null)
+            {
+                temp.Users.ToList().ForEach(user => results.Add(user.Name));
+
+                while (temp != null && temp.CursorMovement.Next != 0)
+                {
+                    temp = Enumerable.FirstOrDefault(
+                        from friend in twtContext.Friendship
+                        where friend.Type == FriendshipType.FriendsList &&
+                              friend.ScreenName == "dev_1ru" &&
+                              friend.Count == 200 &&
+                              friend.Cursor == temp.CursorMovement.Next
+                        select friend);
+
+                    if (temp != null) temp.Users.ToList().ForEach(user => results.Add(user.Name));
                 }
             }
 

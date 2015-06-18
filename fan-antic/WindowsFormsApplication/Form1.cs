@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LinqToTwitter;
@@ -141,5 +142,32 @@ namespace WindowsFormsApplication
 
             return results;
         }
+
+        private void LstFollowNamesSelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            listBox2.Items.Clear();
+            var selectedName = (sender as ListBox).SelectedItem.ToString();
+            string pattern = @"^(.*)\s\(\d{0,4}\)$";
+
+            Match match = Regex.Match(selectedName, pattern);
+
+            if (match.Success)
+            {
+                //we have a name with a count appended
+                selectedName = match.Groups[1].Value.Trim();
+            }
+
+            foreach (var twt in currentTwts.Where(twt => twt.User.Name == selectedName))
+            {
+                listBox2.Items.Add(twt.User.Name + ":" + twt.Text);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listBox2.Items.Clear();
+            currentTwts.ForEach(twt => );
+        }
+
     }
 }

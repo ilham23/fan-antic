@@ -143,7 +143,13 @@ namespace WindowsFormsApplication
             return results;
         }
 
-        private void LstFollowNamesSelectedIndexChanged(object sender, System.EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listBox2.Items.Clear();
+            currentTwts.ForEach(twt => listBox2.Items.Add(twt.User.Name + ":" + twt.Text));
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             listBox2.Items.Clear();
             var selectedName = (sender as ListBox).SelectedItem.ToString();
@@ -161,12 +167,6 @@ namespace WindowsFormsApplication
             {
                 listBox2.Items.Add(twt.User.Name + ":" + twt.Text);
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            listBox2.Items.Clear();
-            currentTwts.ForEach(twt => );
         }
 
     }

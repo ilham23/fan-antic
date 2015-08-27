@@ -1,19 +1,17 @@
-﻿@model web.Models.MainTweetModel
-
-@{
-    ViewBag.Title = "Home Page";
+﻿@{
+    Layout = null;
 }
 
-<h2>@ViewBag.Message</h2>
-<p>
-    To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-</p>
+<!DOCTYPE html>
 
-<ul data-role="listview" data-inset="true">
-    <li data-role="list-divider">Navigation</li>
-    
-    <li data-role="list-divider">@Html.Partial("_MainTweet", Model)</li>
-
-    <li>@Html.ActionLink("About", "About", "Home")</li>
-    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-</ul>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        test
+    </div>
+</body>
+</html>

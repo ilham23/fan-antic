@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A0918BB5-979D-4352-98A6-FE062DB26492}</ProjectGuid>
+    <ProjectGuid>{969F9176-F206-43AD-97F9-33D69F8A0570}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>web.Tests</RootNamespace>
@@ -107,7 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\web\web.csproj">
-      <Project>{7989934D-9E22-46D2-9719-44D5B9CACDB6}</Project>
+      <Project>{0081E5C0-D340-428D-8DD5-42CADF4561CF}</Project>
       <Name>web</Name>
     </ProjectReference>
   </ItemGroup>

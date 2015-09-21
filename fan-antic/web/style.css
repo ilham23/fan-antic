@@ -7,9 +7,10 @@ body {
     font-family: Verdana, sans-serif;
     line-height: 1.4;
     font-size: 13px;
-    background: #FFFFFF;
     margin: 0;
     padding: 0;
+    background-color: #7C7C7C;
+
 }
 
 a {
@@ -129,18 +130,24 @@ th {
     }
 
 #content {
-    background: url(images/content.jpg) repeat-y;
     padding: 10px 40px 20px 40px;
+    margin: auto 10px;
+    background: #FFFFFF;
 }
 
 #footer {
-    background: url(images/footer.jpg) no-repeat;
+    background-color: #4C9EF2;
+    margin: auto 10px;
     padding: 0 40px;
     height: 30px;
     line-height: 30px;
     text-align: center;
     color: #fff;
     font-size: 12px;
+    border-color: white;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: 20px;
 }
 
     #footer p {
@@ -166,8 +173,9 @@ th {
 }
 
 #copyrightarea {
-    background: url(images/copyrightarea.jpg);
     color: #515151;
+    background-color: #fff;
+    margin: auto 10px;
     text-align: right;
     font-size: 11px;
     padding: 0 30px;

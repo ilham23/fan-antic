@@ -120,9 +120,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
     <Content Include="images\bottom.jpg" />
-    <Content Include="images\content.jpg" />
-    <Content Include="images\copyrightarea.jpg" />
-    <Content Include="images\footer.jpg" />
     <Content Include="images\header.jpg" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
@@ -137,12 +134,16 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Default.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,58 +1,15 @@
-﻿@{
+﻿@model List<LinqToTwitter.Status>
+
+@{
     ViewBag.Title = "Index";
 }
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css' />
-    <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css' />
-    <link href='http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here' rel='stylesheet' type='text/css' />
-    <title>Blue Minimal</title>
-</head>
-<body>
 
-    <div id="wrap">
+<div id="content">
+    
+    @foreach (var item in Model)
+    {
+         @Html.Partial("Tweet", item)
+    }
 
-
-        <div id="header">
-            <h1><a href="#">Blue Minimal</a></h1>
-            <h2>Your Mini Site Slogan Goes Here</h2>
-        </div>
-
-        <div id="content">
-
-            <h3>Main Heading of Your Mini Site - H1</h3>
-
-            <p>
-                Sed vitae lectus libero, vitae tempus lacus. Quisque mollis, lectus sed placerat sodales, felis diam accumsan ligula, in auctor leo velit eu diam. Aenean tincidunt velit ac massa dictum bibendum. Ut vulputate tortor vitae orci cursus aliquam. Phasellus rutrum consequat purus, vel cursus odio fermentum non. Morbi luctus feugiat dictum. Duis sed metus vitae augue faucibus condimentum. Ut id velit eget magna venenatis ultrices in sit amet tellus. Praesent augue nibh, condimentum vel molestie sit amet, luctus nec neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus convallis erat nisl. Mauris feugiat pharetra pellentesque. Pellentesque vulputate mi quis erat fringilla tempus. Suspendisse potenti. 
-            </p>
-
-            <h3>Main Heading of Your Mini Site - H1</h3>
-
-            <p>
-                Sed vitae lectus libero, vitae tempus lacus. Quisque mollis, lectus sed placerat sodales, felis diam accumsan ligula, in auctor leo velit eu diam. Aenean tincidunt velit ac massa dictum bibendum. Ut vulputate tortor vitae orci cursus aliquam. Phasellus rutrum consequat purus, vel cursus odio fermentum non. Morbi luctus feugiat dictum. Duis sed metus vitae augue faucibus condimentum. Ut id velit eget magna venenatis ultrices in sit amet tellus. Praesent augue nibh, condimentum vel molestie sit amet, luctus nec neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus convallis erat nisl. Mauris feugiat pharetra pellentesque. Pellentesque vulputate mi quis erat fringilla tempus. Suspendisse potenti. 
-            </p>
-
-
-        </div>
-
-        <div id="footer">
-            <div class="footerleft"><a href="#">Privacy Policy</a> | <a href="#">Copyright</a></div>
-            <div class="footerright"><a href="http://yoctotemplates.com/mini-site-templates/blue-minimal/">Blue Minimal</a> | Design by <a href="http://www.yoctotemplates.com">Yocto Templates</a></div>
-            <div style="clear: both;"></div>
-        </div>
-
-        <div id="copyrightarea">
-            All Right Reserved, Copyright &copy; YOUR MINI SITE.
-        </div>
-
-        <div id="bottom"></div>
-
-    </div>
-
-</body>
-</html>
+</div>

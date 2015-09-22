@@ -1,0 +1,17 @@
+﻿@model LinqToTwitter.Status
+@{
+    var sdaf = Model;
+}
+
+<div class="home-image">
+    <img src="@Model.User.ProfileImageUrl" />
+</div>
+
+<h3 class="home-username">@Model.User.Name </h3>
+<div style="clear: both;"></div>
+
+
+<p>
+    @Model.Text
+    
+</p>

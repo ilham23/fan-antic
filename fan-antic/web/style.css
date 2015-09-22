@@ -26,7 +26,6 @@ h1, h2, h3, h4, h5 {
     font-family: 'Architects Daughter', arial, serif;
     margin: 5px 0 20px 0;
     font-weight: 100;
-    border-bottom: 1px dotted #919191;
 }
 
 h1 {
@@ -186,4 +185,14 @@ th {
 #bottom {
     background: url(images/bottom.jpg) no-repeat;
     padding: 5px 0;
+}
+
+.home-image {
+    float: left;
+}
+
+.home-username {
+    float: left;
+    margin: 0 0 0 5px;
+    font-size: 20px;
 }

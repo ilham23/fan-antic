@@ -2,16 +2,20 @@
 @{
     var sdaf = Model;
 }
+<li>
+    <div>
+        <div class="home-username">
+            <h3 style="margin: 0;">@Model.User.Name @@@Model.User.ScreenNameResponse @Model.CreatedAt.ToString("HH:mm:ss")</h3>
+        </div>
+        <div style="clear: both;"></div>
 
-<div class="home-image">
-    <img src="@Model.User.ProfileImageUrl" />
-</div>
+        <div class="home-image">
+            <img src="@Model.User.ProfileImageUrl" />
+        </div>
 
-<h3 class="home-username">@Model.User.Name </h3>
-<div style="clear: both;"></div>
-
-
-<p>
-    @Model.Text
-    
-</p>
+        <div>
+            @Model.Text
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+</li>

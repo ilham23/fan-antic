@@ -1,4 +1,8 @@
-﻿using System.Web.Mvc;
+﻿using System.Collections.Generic;
+using System.Net.Mime;
+using System.Web.Mvc;
+using LinqToTwitter;
+using web.Common;
 using web.Services;
 
 namespace web.Controllers
@@ -7,9 +11,7 @@ namespace web.Controllers
     {
         public ActionResult Index()
         {
-            var service = new TwitterService();
-
-            var twts = service.GetMostRecent200HomeTimeline();
+            var twts = ApplicationData.GetApplicationData(CacheParam.CacheTimelineTweet) as List<Status>;
 
             return View("Index", twts);
         }

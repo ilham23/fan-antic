@@ -6,10 +6,10 @@
 
 
 <div id="content">
-    
-    @foreach (var item in Model)
-    {
-         @Html.Partial("Tweet", item)
-    }
-
+    <ul>
+        @foreach (var item in Model)
+        {
+            @Html.Partial("Tweet", item)
+        }
+    </ul>
 </div>
